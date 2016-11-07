@@ -1,10 +1,30 @@
-/** 
+/**
 * Anax Flat theme.
 */
 @import url(modules.less);
 
+@headerBgColor: #777;
+@fontColor: #222;
+@backgroundByline: #c3c3c3;
+@footerFontColor: #eee;
+@footerBgColor: #333;
+@footerLinkColor: #fff;
+
+body {
+    color: @fontColor;
+}
 
 
+/** --------------------------------------------------------------
+ *  Wrapper
+ */
+.wrap-all {
+    box-shadow: 0px 0px 6px #333;
+
+}
+.inner-wrap-main {
+    padding: 0 20px;
+}
 /** --------------------------------------------------------------
  *  Logo images
  */
@@ -16,6 +36,129 @@
 
 .site-logo-text-icon {
     img {
-        vertical-align: bottom;
+        vertical-align: middle;
     }
 }
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+.site-header {
+    background-color: @headerBgColor;
+}
+
+.site-logo-text {
+    font-size: 2em;
+    a {
+        color: #eee;
+        text-decoration: none;
+    }
+}
+
+//Navbar
+@navbarItemColor: #eee;
+@navbarItemBgColor: #666;
+@navbarItemHoverColor: #eee;
+@navbarItemHoverBgColor: #999;
+@maxButtonFontSize: 2em;
+@maxButtonColor: #fff;
+
+.rm-desktop li {
+    border: 3px solid #555;
+    box-shadow: 0px 0px 3px #c3c3c3;
+}
+.rm-desktop li:hover {
+    box-shadow: 0px 0px 9px #c3c3c3;
+}
+
+
+@media screen and (max-width: 485px) {
+    .navbar2 {
+        display: none;
+    }
+}
+//Banner
+.flash-wrap img {
+    width: 100%;
+}
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+.breadcrumb-list ul {
+    li {
+        display: inline;
+    }
+    li::before {
+        content: "» ";
+    }
+    li:first-child:before {
+        content: "";
+    }
+}
+/** --------------------------------------------------------------
+ *  Sidebar
+ */
+ @media screen and (max-width: 750px) {
+     .sidebar {
+         width: 100%;
+         display: block;
+     }
+}
+/** --------------------------------------------------------------
+ *  Main
+ */
+.main.has-sidebar-left {
+    width: 66%;
+    float: right;
+}
+@media screen and (max-width: 750px) {
+    .main.has-sidebar-left {
+        width: 100%;
+        display: block;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Article
+ */
+
+.article img {
+    max-width: 100%;
+}
+
+/** --------------------------------------------------------------
+ *  Byline
+ */
+.byline {
+    background-color: @backgroundByline;
+    overflow: auto;
+    padding: 20px;
+    img {
+        width: 60px;
+        float: left;
+    }
+    p {
+        margin: 0 20px 0 80px;
+    }
+}
+/** --------------------------------------------------------------
+ *  Footer
+ */
+ .footer {
+     background-color: @footerBgColor;
+     color: @footerFontColor;
+     .block {
+         padding: 0 20px;
+     }
+     a {
+         color: @footerLinkColor;
+     }
+ }
+
+ @media screen and (max-width: 750px) {
+     .footer-column {
+         width: 100%;
+         display: block;
+     }
+ }
