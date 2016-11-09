@@ -12,6 +12,10 @@
 @footerBgColor: #333;
 @footerLinkColor: #fff;
 
+html {
+    overflow-y:scroll;
+}
+
 body {
     color: @fontColor;
 }
@@ -90,9 +94,9 @@ body {
 .breadcrumb-list ul {
     li {
         display: inline;
-    }
-    li::before {
-        content: "» ";
+        &:before {
+            content: "» ";
+        }
     }
     li:first-child:before {
         content: "";

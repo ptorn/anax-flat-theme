@@ -3045,6 +3045,9 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   overflow: visible;
   clip: auto;
 }
+html {
+  overflow-y: scroll;
+}
 body {
   color: #222;
 }
@@ -3102,7 +3105,7 @@ body {
 .breadcrumb-list ul li {
   display: inline;
 }
-.breadcrumb-list ul li::before {
+.breadcrumb-list ul li:before {
   content: "» ";
 }
 .breadcrumb-list ul li:first-child:before {
