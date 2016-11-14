@@ -44,7 +44,7 @@ FONT_AWESOME 	= modules/font-awesome/fonts/
 
 
 
-# target: help               - Displays help.
+# target: help                    - Displays help.
 .PHONY:  help
 help:
 	@$(call HELPTEXT,$@)
@@ -55,7 +55,7 @@ help:
 
 
 
-# target: prepare-build      - Clear and recreate the build directory.
+# target: prepare-build           - Clear and recreate the build directory.
 .PHONY: prepare-build
 prepare-build:
 	@$(call HELPTEXT,$@)
@@ -63,7 +63,7 @@ prepare-build:
 
 
 
-# target: clean              - Remove all generated files.
+# target: clean                   - Remove all generated files.
 .PHONY:  clean
 clean:
 	@$(call HELPTEXT,$@)
@@ -72,7 +72,7 @@ clean:
 
 
 
-# target: clean-all          - Remove all installed files.
+# target: clean-all               - Remove all installed files.
 .PHONY:  clean-all
 clean-all: clean
 	@$(call HELPTEXT,$@)
@@ -80,7 +80,7 @@ clean-all: clean
 
 
 
-# target: less               - Compile and minify the stylesheet.
+# target: less                    - Compile and minify the stylesheet.
 .PHONY: less
 less: prepare-build
 	@$(call HELPTEXT,$@)
@@ -90,7 +90,7 @@ less: prepare-build
 
 
 
-# target: less-install       - Installing the stylesheet.
+# target: less-install            - Installing the stylesheet.
 .PHONY: less-install
 less-install: less
 	@$(call HELPTEXT,$@)
@@ -99,7 +99,7 @@ less-install: less
 
 
 
-# target: less-lint          - Lint the less stylesheet.
+# target: less-lint               - Lint the less stylesheet.
 .PHONY: less-lint
 less-lint: less
 	@$(call HELPTEXT,$@)
@@ -109,14 +109,14 @@ less-lint: less
 
 
 
-# target: test               - Execute all tests.
+# target: test                    - Execute all tests.
 .PHONY: test
 test: less-lint
 	@$(call HELPTEXT,$@)
 
 
 
-# target: update             - Update codebase including submodules.
+# target: update                  - Update codebase including submodules.
 .PHONY: update
 update:
 	@$(call HELPTEXT,$@)
@@ -125,9 +125,9 @@ update:
 
 
 
-# target: npm-install        - Install npm development packages.
-# target: npm-update         - Update npm development packages.
-# target: npm-version        - Display version for each package.
+# target: npm-install             - Install npm development packages.
+# target: npm-update              - Update npm development packages.
+# target: npm-version             - Display version for each package.
 .PHONY: npm-installl npm-update npm-version
 npm-install:
 	@$(call HELPTEXT,$@)
@@ -143,7 +143,7 @@ npm-version:
 	$(NPMBIN)/csslint --version
 
 
-# target: upgrade-normalize - Upgrade LESS module - Normalize.
+# target: upgrade-normalize       - Upgrade LESS module - Normalize.
 .PHONY: upgrade-normalize
 upgrade-normalize:
 	@$(call HELPTEXT,$@)
@@ -159,3 +159,15 @@ upgrade-responsive-menu:
 	# Responsive-menu
 	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/less/responsive-menu.less -O $(LESS_MODULES)/responsive-menu.less
 	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/js/responsive-menu.js -O js/responsive-menu.js
+
+
+# target: upgrade-grid            - Upgrade LESS module - Grid.
+.PHONY: upgrade-grid
+upgrade-grid:
+	@$(call HELPTEXT,$@)
+
+	# Grid
+	wget --quiet https://raw.githubusercontent.com/dbwebb-se/design/master/example/grid/fluid/less/grid-flex.less -O $(LESS_MODULES)/grid-flex.less
+	wget --quiet https://raw.githubusercontent.com/dbwebb-se/design/master/example/grid/fluid/less/grid-float.less -O $(LESS_MODULES)/grid-float.less
+	wget --quiet https://raw.githubusercontent.com/dbwebb-se/design/master/example/grid/fluid/less/layout-responsive-flex.less -O $(LESS_MODULES)/layout-responsive-flex.less
+	wget --quiet https://raw.githubusercontent.com/dbwebb-se/design/master/example/grid/fluid/less/layout-responsive-float.less -O $(LESS_MODULES)/layout-responsive-float.less

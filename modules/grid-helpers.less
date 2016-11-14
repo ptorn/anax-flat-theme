@@ -1,0 +1,15 @@
+.showGrid(@maxWidth: 960px) {
+    background-image: url("../img/grid/grid960x12x60x20.png");
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: @maxWidth) {
+        background-size: @maxWidth auto;
+    }
+}
+
+.showHorisontalGrid(@maxWidth: 960px) {
+    background-image: url("../img/grid/horisontal-grid-22.png");
+}
