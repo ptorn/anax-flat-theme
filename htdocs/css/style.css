@@ -1188,13 +1188,6 @@ body hr:after {
 }
 /* Responsiv Layout */
 @media screen and (max-width: 750px) {
-  .navbar2 {
-    display: inline;
-    float: left;
-    width: -2.08333333%;
-    margin-left: 1.04166667%;
-    margin-right: 1.04166667%;
-  }
   .sidebar {
     display: inline;
     float: left;
@@ -3711,6 +3704,9 @@ body {
   color: #eee;
   text-decoration: none;
 }
+/** --------------------------------------------------------------
+ *  Navbar
+ */
 .rm-desktop li {
   border: 3px solid #555;
   box-shadow: 0px 0px 3px #c3c3c3;
@@ -3718,6 +3714,14 @@ body {
 .rm-desktop li:hover {
   box-shadow: 0px 0px 9px #c3c3c3;
 }
+@media screen and (max-width: 750px) {
+  .navbar2 {
+    display: none;
+  }
+}
+/** --------------------------------------------------------------
+ *  Banner - Flash
+ */
 .flash-wrap {
   max-height: 250px;
 }
