@@ -40,7 +40,7 @@ body {
 }
 
 .inner-wrap-main {
-    padding: 0 20px;
+    padding: 0 @magicNumber;
 }
 
 .site-header,
@@ -185,13 +185,13 @@ body {
 .byline {
     background-color: @backgroundByline;
     overflow: auto;
-    padding: 20px;
+    padding: @magicNumber;
     img {
         width: 60px;
         float: left;
     }
     p {
-        margin: 0 20px 0 80px;
+        margin: 0 @magicNumber 0 @magicNumber+60;
     }
 }
 /** --------------------------------------------------------------
@@ -201,7 +201,7 @@ body {
     background-color: @footerBgColor;
     color: @footerFontColor;
     .block {
-        padding: 0 20px;
+        padding: 0 @magicNumber;
     }
     a {
         color: @footerLinkColor;

@@ -3665,7 +3665,7 @@ body {
   overflow: hidden;
 }
 .inner-wrap-main {
-  padding: 0 20px;
+  padding: 0 22px;
 }
 .site-header,
 .flash-wrap,
@@ -3781,14 +3781,14 @@ body {
 .byline {
   background-color: #c3c3c3;
   overflow: auto;
-  padding: 20px;
+  padding: 22px;
 }
 .byline img {
   width: 60px;
   float: left;
 }
 .byline p {
-  margin: 0 20px 0 80px;
+  margin: 0 22px 0 82px;
 }
 /** --------------------------------------------------------------
  *  Footer
@@ -3798,7 +3798,7 @@ body {
   color: #eee;
 }
 .footer .block {
-  padding: 0 20px;
+  padding: 0 22px;
 }
 .footer a {
   color: #fff;
