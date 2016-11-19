@@ -12,7 +12,7 @@
 @footerBgColor: #333;
 @footerLinkColor: #fff;
 @mediaBreakWidth: 750px;
-@pageWidth: 960px;
+@maxWidth: 960px;
 
 html {
     overflow-y:scroll;
@@ -24,11 +24,11 @@ body {
 
 //Grids for help
 .route-grid .wrap-all {
-    .showGrid(@pageWidth)
+    .showGrid(@maxWidth)
 }
 
 .route-typography .outer-wrap-main {
-    .showHorisontalGrid(@pageWidth)
+    .showHorisontalGrid(@maxWidth)
 }
 
 /** --------------------------------------------------------------
@@ -39,10 +39,6 @@ body {
     overflow: hidden;
 }
 
-.inner-wrap-main {
-    padding: 0 @magicNumber;
-}
-
 .site-header,
 .flash-wrap,
 .breadcrumb-wrap,
@@ -51,7 +47,7 @@ body {
     overflow: hidden;
 }
 
-@media only screen and (max-width: @pageWidth) {
+@media only screen and (max-width: @maxWidth) {
     .wrap-all {
         box-shadow: none;
     }

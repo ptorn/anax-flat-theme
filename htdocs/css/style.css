@@ -649,6 +649,9 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * A small clearfix:
  * http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use
  */
+.inner-wrap-main {
+  margin: 0 10px;
+}
 /**
  * Wrap grid in a container.
  */
@@ -1299,9 +1302,18 @@ body hr:after {
   padding: 0 0.25em;
   background-color: #fff;
 }
+body h1 {
+  margin-top: -1px;
+}
+body h1 ~ h2 {
+  margin-top: 43px;
+}
+body hr {
+  top: 0;
+}
 article table tr th,
 article table tr td {
-  padding: 1.375em;
+  padding: 22px;
 }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -3667,9 +3679,6 @@ body {
 .wrap-all {
   box-shadow: 0px 0px 6px #333;
   overflow: hidden;
-}
-.inner-wrap-main {
-  padding: 0 22px;
 }
 .site-header,
 .flash-wrap,
