@@ -19,7 +19,7 @@
  */
 /* Document
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css?family=Varela+Round|Trirong');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Trirong');
 html {
   font-family: sans-serif;
   /* 1 */
@@ -1031,7 +1031,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * 0.75em  * 16px   = 12 => line-height: 22/12 = 1.8333
 */
 body {
-  font: 100.01%/1.375 "Trirong", Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 16px/1.375 "Trirong", Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body h1,
 body h2,
@@ -1039,7 +1039,7 @@ body h3,
 body h4,
 body h5,
 body h6 {
-  font-family: "Varela+Round", Cambria, Georgia, Times, 'Times New Roman', serif;
+  font-family: "Raleway", Cambria, Georgia, Times, 'Times New Roman', serif;
   margin-top: 0;
   margin-bottom: 22px;
 }
@@ -1052,10 +1052,11 @@ body h6 img {
   margin: 0;
 }
 body h1 {
-  font-size: 2.375em;
-  line-height: 1.15789474;
-  font-weight: normal;
+  font-size: 2.25em;
+  line-height: 1.22222222;
+  font-weight: bold;
   border-bottom: 1px solid #666;
+  margin-top: -1px;
   margin-bottom: 21px;
 }
 body h1 ~ h1,
@@ -1066,6 +1067,9 @@ body h1 ~ h5,
 body h1 ~ h6 {
   margin-top: 44px;
 }
+body h1 ~ h2 {
+  margin-top: 43px;
+}
 body h1 + h2 {
   margin-top: 22px;
 }
@@ -1073,7 +1077,7 @@ body h2 {
   font-size: 1.875em;
   line-height: 1.46666667;
   font-weight: normal;
-  margin-top: 44px;
+  margin-top: 43px;
   margin-bottom: 21px;
   border-bottom: 1px solid #999;
 }
@@ -1302,18 +1306,15 @@ body hr:after {
   padding: 0 0.25em;
   background-color: #fff;
 }
-body h1 {
-  margin-top: -1px;
-}
-body h1 ~ h2 {
-  margin-top: 43px;
-}
-body hr {
-  top: 0;
+body pre code {
+  line-height: inherit;
+  font-size: 1em;
+  margin-top: 22px;
+  margin-bottom: 22px;
 }
 article table tr th,
 article table tr td {
-  padding: 22px;
+  padding: 1.375em;
 }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome

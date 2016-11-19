@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Varela+Round|Trirong');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Trirong');
 
-@fontFamilyVarelaRound:         "Varela+Round";
+@fontFamilyRaleway:         "Raleway";
 @fontFamilyTrirong:             "Trirong";
 
 
-@fontFamilyHeadings:  @fontFamilyVarelaRound, @fontFamilyCambria;
+@fontFamilyHeadings:  @fontFamilyRaleway, @fontFamilyCambria;
 @fontFamilyBody:      @fontFamilyTrirong, @fontFamilyCalibri;
 @fontFamilyCode:      @fontFamilyCourier;
 body {
@@ -15,14 +15,11 @@ body {
     .typographyListElements();
     .typographyTableElements();
     .typographyOtherElements();
-    h1 {
-        margin-top: -1px;
-    }
-    h1~h2 {
-        margin-top: @magicNumber * 2 - 1;
-    }
-    hr {
-        top: 0;
+    pre code {
+        line-height: inherit;
+        font-size: 1em;
+        margin-top: @magicNumber;
+        margin-bottom: @magicNumber;
     }
 }
 
@@ -31,7 +28,7 @@ article {
         tr {
             th,
             td {
-                padding: @magicNumber;
+                padding: 1.375em;
             }
         }
     }

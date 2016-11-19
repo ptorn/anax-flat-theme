@@ -19,15 +19,15 @@
         img {
             margin: 0;
         }
+
     }
 
     h1 {
         .fontSize(@fontSizeH1);
-        font-weight: normal;
-
+        font-weight: bold;
         border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
+        margin-top: -1px;
         margin-bottom: @magicNumber - @borderSizeH1;
-
         // If header below h1, then assume larger margin top
         & ~ h1,
         & ~ h2,
@@ -37,6 +37,10 @@
         & ~ h6,
          {
             margin-top: @magicNumber * 2;
+        }
+
+        & ~ h2 {
+            margin-top: @magicNumber * 2 - 1;
         }
 
         // Single margin when subheader follows directly
@@ -49,7 +53,7 @@
         .fontSize(@fontSizeH2);
         font-weight: normal;
 
-        margin-top: @magicNumber * 2;
+        margin-top: (@magicNumber * 2) - 1;
         margin-bottom: @magicNumber - @borderSizeH2;
 
         border-bottom: @borderSizeH2 solid @colorH2BorderBottom;
