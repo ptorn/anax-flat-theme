@@ -1,0 +1,177 @@
+/**
+* Anax Flat theme. Light
+*/
+@import url(base.less);
+@mediaBreakWidth: 750px;
+@maxWidth: 960px;
+@bodyBgColor: #E3FFD6;
+@headerBgColor: #FF8641;
+@headerLogoText: #BCFF9C;
+@fontColor: #000;
+@linkColor: #000;
+@visitedLinkColor: #666;
+@wrap-allBgColor: #fff;
+@backgroundBreadcrumb: #fff;
+@breadcrumbLinkColor: #000;
+@backgroundByline: #E3FFD6;
+@footerFontColor: #000;
+@footerBgColor: #FD41D4;
+@footerLinkColor: #000;
+@slideNavLinkColor: #000;
+@slideNavBgColor: #FD41D4;
+@navbarItemColor: #333;
+@navbarItemBgColor: #FF8641;
+@navbarItemHoverColor: #333;
+@navbarItemHoverBgColor: #9DFF6E;
+@maxButtonFontSize: 2em;
+@maxButtonColor: #f3f3f3;
+
+body {
+    background-color: #E3FFD6;
+    -webkit-animation-name: blink; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes blink {
+    0% {background-color: #E3FFD6;}
+    25% {background-color: #FD41D4;}
+    50% {background-color: #BCFF9C;}
+    75% {background-color: #FD41D4;}
+    100% {background-color: #E3FFD6;}
+}
+
+/* Standard syntax */
+@keyframes bilnk {
+    0% {background-color: #E3FFD6;}
+    25% {background-color: #FD41D4;}
+    50% {background-color: #BCFF9C;}
+    75% {background-color: #FD41D4;}
+    100% {background-color: #E3FFD6;}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes bounce {
+    0% {
+        margin-top: 0;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    12.5% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    25% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    37.5% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+
+    }
+    50% {
+        margin-top: @magicNumber*4;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    62.5% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    75% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+
+    }
+    87.5% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+
+    }
+    100% {
+        margin-top: 0;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+}
+
+/* Standard syntax */
+@keyframes bounce {
+    0% {
+        margin-top: 0;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    12.5% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    25% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    37.5% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+
+    }
+    50% {
+        margin-top: @magicNumber*4;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    62.5% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    75% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+
+    }
+    87.5% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+
+    }
+    100% {
+        margin-top: 0;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+}
+
+.wrap-all {
+    -webkit-animation-name: bounce; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 8s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite;
+    animation-name: bounce;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+
+.breadcrumb-wrap {
+    ul {
+        padding-left: @gutterWidth/2px;
+    }
+}
+
+.fa,
+.rm-max .rm-small .rm-button.rm-clicked {
+    color: #FFFFFF;
+}
+
+.outer-wrap-after-main {
+    background-color: @backgroundByline;
+}

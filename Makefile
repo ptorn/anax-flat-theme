@@ -36,7 +36,7 @@ VENDORBIN 	= vendor/bin
 NPMBIN		= node_modules/.bin
 
 # LESS and CSS
-LESS 		 	= style.less
+LESS 		 	= style.less base.less light.less color.less dark.less colorful.less typography.less fun.less #style2.less
 LESS_MODULES	= modules/
 LESS_OPTIONS 	= --strict-imports --include-path=$(LESS_MODULES)
 CSSLINT_OPTIONS = --quiet
@@ -44,7 +44,7 @@ FONT_AWESOME 	= modules/font-awesome/fonts/
 
 
 
-# target: help                    - Displays help.
+# target: help               - Displays help.
 .PHONY:  help
 help:
 	@$(call HELPTEXT,$@)
@@ -55,7 +55,7 @@ help:
 
 
 
-# target: prepare-build           - Clear and recreate the build directory.
+# target: prepare-build      - Clear and recreate the build directory.
 .PHONY: prepare-build
 prepare-build:
 	@$(call HELPTEXT,$@)
@@ -63,7 +63,7 @@ prepare-build:
 
 
 
-# target: clean                   - Remove all generated files.
+# target: clean              - Remove all generated files.
 .PHONY:  clean
 clean:
 	@$(call HELPTEXT,$@)
@@ -72,7 +72,7 @@ clean:
 
 
 
-# target: clean-all               - Remove all installed files.
+# target: clean-all          - Remove all installed files.
 .PHONY:  clean-all
 clean-all: clean
 	@$(call HELPTEXT,$@)
@@ -80,43 +80,47 @@ clean-all: clean
 
 
 
-# target: less                    - Compile and minify the stylesheet.
+# target: less               - Compile and minify the stylesheet(s).
 .PHONY: less
 less: prepare-build
 	@$(call HELPTEXT,$@)
-	$(NPMBIN)/lessc $(LESS_OPTIONS) $(LESS) build/css/style.css
-	$(NPMBIN)/lessc --clean-css $(LESS_OPTIONS) $(LESS) build/css/style.min.css
-	cp build/css/style*.css htdocs/css/
+
+	$(foreach file, $(LESS), $(NPMBIN)/lessc $(LESS_OPTIONS) $(file) build/css/$(basename $(file)).css; )
+	$(foreach file, $(LESS), $(NPMBIN)/lessc --clean-css $(LESS_OPTIONS) $(file) build/css/$(basename $(file)).min.css; )
+
+	cp build/css/*.min.css htdocs/css/
 
 
 
-# target: less-install            - Installing the stylesheet.
+# target: less-install       - Installing the stylesheet(s).
 .PHONY: less-install
 less-install: less
 	@$(call HELPTEXT,$@)
-	if [ -d ../htdocs/css/ ]; then cp build/css/style.min.css ../htdocs/css/style.min.css; fi
+	if [ -d ../htdocs/css/ ]; then cp build/css/*.min.css ../htdocs/css/; fi
 	if [ -d ../htdocs/js/ ]; then rsync -a js/ ../htdocs/js/; fi
 
 
 
-# target: less-lint               - Lint the less stylesheet.
+# target: less-lint          - Lint the less stylesheet(s).
 .PHONY: less-lint
 less-lint: less
 	@$(call HELPTEXT,$@)
-	$(NPMBIN)/lessc --lint $(LESS_OPTIONS) $(LESS) > build/lint/style.less
-	- $(NPMBIN)/csslint $(CSSLINT_OPTIONS) build/css/style.css > build/lint/style.css
+
+	$(foreach file, $(LESS), $(NPMBIN)/lessc --lint $(LESS_OPTIONS) $(file) > build/lint/$(file); )
+	- $(foreach file, $(LESS), $(NPMBIN)/csslint $(CSSLINT_OPTIONS) build/css/$(basename $(file)).css > build/lint/$(basename $(file)).css; )
+
 	ls -l build/lint/
 
 
 
-# target: test                    - Execute all tests.
+# target: test               - Execute all tests.
 .PHONY: test
 test: less-lint
 	@$(call HELPTEXT,$@)
 
 
 
-# target: update                  - Update codebase including submodules.
+# target: update             - Update codebase including submodules.
 .PHONY: update
 update:
 	@$(call HELPTEXT,$@)
@@ -125,9 +129,9 @@ update:
 
 
 
-# target: npm-install             - Install npm development packages.
-# target: npm-update              - Update npm development packages.
-# target: npm-version             - Display version for each package.
+# target: npm-install        - Install npm development packages.
+# target: npm-update         - Update npm development packages.
+# target: npm-version        - Display version for each package.
 .PHONY: npm-installl npm-update npm-version
 npm-install:
 	@$(call HELPTEXT,$@)

@@ -25,9 +25,10 @@
     h1 {
         .fontSize(@fontSizeH1);
         font-weight: bold;
-        border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
+        //border-bottom: @borderSizeH1 solid @colorH1BorderBottom; Removed by Peder
         margin-top: -1px;
-        margin-bottom: @magicNumber - @borderSizeH1;
+        //margin-bottom: @magicNumber - @borderSizeH1; Removed by Peder
+        margin-bottom: @magicNumber;
         // If header below h1, then assume larger margin top
         & ~ h1,
         & ~ h2,
