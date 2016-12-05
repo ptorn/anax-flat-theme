@@ -10,9 +10,8 @@
 @fontFamilyBody:      @fontFamilyTrirong, @fontFamilyCalibri;
 @fontFamilyCode:      @fontFamilyCourier;
 
-@mediaBreakWidth: 750px;
 @maxWidth: 960px;
-@bodyBgColor: #E3FFD6;
+@bodyBgColor: #fff;
 @headerBgColor: #777;
 @headerLogoText: #eee;
 @fontColor: #222;
@@ -20,7 +19,8 @@
 @visitedLinkColor: #555;
 @mainBgColor: none;
 @wrap-allBgColor: #fff;
-@backgroundBreadcrumb: #c3c3c3;
+@flashHeight: 450px;
+@backgroundBreadcrumb: none;
 @breadcrumbLinkColor: #222;
 @backgroundByline: #c3c3c3;
 @footerFontColor: #eee;
@@ -29,6 +29,7 @@
 
 @slideNavLinkColor: #E3FFD6;
 @slideNavBgColor: #333;
+@navbarDesktopFontSize: 0.95em;
 @navbarItemColor: #eee;
 @navbarItemBgColor: #777;
 @navbarItemHoverColor: #eee;
@@ -47,8 +48,52 @@ body a {
 }
 
 /** --------------------------------------------------------------
+ *  Header
+ */
+ .site-header {
+     height: auto;
+ }
+@media only screen and (min-width: @maxWidth) {
+    .site-header {
+        height: 52px;
+    }
+}
+/** --------------------------------------------------------------
+ *  Navigation
+ */
+
+ .navbar2 {
+     float: right;
+ }
+
+/** --------------------------------------------------------------
  *  Wrapper
  */
 .wrap-all {
-    box-shadow: 0px 0px 6px #333;
+    // box-shadow: 0px 0px 6px #333;
+}
+
+.outer-wrap-header {
+    background-color: #777;
+}
+
+.outer-wrap-after-main {
+    background-color: #c3c3c3;
+}
+
+
+
+.outer-wrap-footer {
+    background-color: #333;
+}
+
+.inner-wrap-flash {
+    width: 100%;
+    max-width: 100%;
+}
+
+.google-iframe {
+    iframe {
+        width: 100%;
+    }
 }

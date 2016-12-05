@@ -4,7 +4,7 @@
 @import url(modules.less);
 // Font Awesome
 @import "font-awesome-4.7.0/less/font-awesome.less";
-@mediaBreakWidth: 750px;
+@mediaBreakWidth: 960px;
 @maxWidth: 960px;
 @bodyBgColor: none;
 @headerBgColor: #fff;
@@ -14,6 +14,7 @@
 @visitedLinkColor: #551A8B;
 @mainBgColor: none;
 @wrap-allBgColor: none;
+@flashHeight: 250px;
 @backgroundBreadcrumb: #fff;
 @breadcrumbLinkColor: #0000EE;
 @backgroundByline: #fff;
@@ -22,6 +23,7 @@
 @footerLinkColor: #0000EE;
 @slideNavLinkColor: #fff;
 @slideNavBgColor: #000;
+@navbarDesktopFontSize: 1em;
 @navbarItemColor: #0000EE;
 @navbarItemBgColor: #fff;
 @navbarItemHoverColor: #0000EE;
@@ -58,7 +60,7 @@ a:visited {
     color: @visitedLinkColor;
 }
 //Grids for help
-.route-grid .wrap-all {
+.route-grid .inner-wrap {
     .showGrid(@maxWidth)
 }
 
@@ -72,10 +74,15 @@ a:visited {
 .wrap-all {
     //box-shadow: 0px 0px 6px #333;
     overflow: hidden;
-    background-color: @wrap-allBgColor;
+    // background-color: @wrap-allBgColor;
 }
 
-.site-header,
+.outer-wrap {
+    background: none;
+    background-color: none;
+}
+
+// .site-header,
 .flash-wrap,
 .breadcrumb-wrap,
 .after-main,
@@ -86,6 +93,9 @@ a:visited {
 @media only screen and (max-width: @maxWidth) {
     .wrap-all {
         box-shadow: none;
+    }
+    .outer-wrap {
+        margin: 0 4px;
     }
 }
 
@@ -119,10 +129,36 @@ a:visited {
         text-decoration: none;
     }
 }
+.site-logo-text {
+    display: none;
+}
+.site-logo {
+    img {
+        max-height: 50px;
+    }
+}
+
+
+@media only screen and (max-width: @maxWidth) {
+
+    .site-header {
+        height: auto;
+        .site-logo-text {
+            display: block;
+        }
+    }
+    .site-logo {
+        display: none;
+    }
+}
 
 /** --------------------------------------------------------------
  *  Navbar
  */
+
+ .rm-desktop {
+     font-size: @navbarDesktopFontSize;
+ }
 .rm-desktop li {
     //border: 3px solid #555;
     //box-shadow: 0px 0px 3px #c3c3c3;
@@ -141,10 +177,16 @@ a:visited {
     box-shadow:0 0 1px rgba(red(@slideNavLinkColor),green(@slideNavLinkColor),blue(@slideNavLinkColor),.4);
 
 }
+.rm-navbar-max {
+    display: none;
+}
 
 @media screen and (max-width: @mediaBreakWidth) {
     .navbar2 {
         display: none;
+    }
+    .rm-navbar-max {
+        display: block;
     }
 }
 
@@ -152,7 +194,8 @@ a:visited {
  *  Banner - Flash
  */
 .flash-wrap {
-    max-height: 250px;
+    max-height: @flashHeight;
+    position: relative;
     img {
         width: 100%;
         display: block;
@@ -165,7 +208,7 @@ a:visited {
 .breadcrumb-wrap {
     background-color: @backgroundBreadcrumb;
     .breadcrumb-list ul {
-        padding-left: @gutterWidth/2px;
+        padding-left: 0;//@gutterWidth/2px;
         margin: 0;
         li {
             display: inline;
@@ -209,6 +252,12 @@ a:visited {
 .next-previous {
     overflow: hidden;
 }
+@media screen and (max-width: @mediaBreakWidth) {
+    .sidebar {
+        display: block;;
+    }
+}
+
 
 /** --------------------------------------------------------------
  *  Article

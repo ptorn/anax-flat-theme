@@ -1,5 +1,5 @@
 @maxWidth: 960px;
-.wrap-all {
+.inner-wrap {
     .container();
     max-width: @maxWidth;
 }
@@ -24,8 +24,13 @@
     margin-bottom: @magicNumber;
 }
 .main {
-    .column(8);
+    .column(12);
     margin-bottom: @magicNumber;
+}
+
+.main.has-sidebar {
+    .column(8);
+
 }
 
 /* FOOTER */
@@ -45,7 +50,8 @@
     .sidebar {
         .column(12);
     }
-    .main {
+    .main,
+    .main.has-sidebar {
         .column(12);
     }
     .column.footer-column {
