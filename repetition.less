@@ -1,5 +1,5 @@
 /**
-* Anax Flat theme. Color
+* Anax Flat theme. Repetition
 */
 @import url(base.less);
 @maxWidth: 960px;
@@ -23,22 +23,29 @@
 @maxButtonFontSize: 2em;
 @maxButtonColor: #f3f3f3;
 
+/** --------------------------------------------------------------
+ *  Wrapper
+ */
 .wrap-all {
     border: 1px solid #284A17;
     background-image: url('../img/peder-logo.png');
 }
+
 .inner-wrap-breadcrumb {
     height: @magicNumber;
     overflow: hidden;
 }
+
 .inner-wrap-main {
+    background-color: #fff;
+
     a:link,
     a:visited {
         color: #FE6CDE;
         text-decoration: underline;
     }
-    background-color: #fff;
 }
+
 @media only screen and (max-width: @maxWidth) {
     .inner-wrap-main {
         margin-top: 90px;

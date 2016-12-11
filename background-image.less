@@ -1,0 +1,106 @@
+/**
+* Anax Flat theme. Background Image
+*/
+@import url(base.less);
+@maxWidth: 100%;
+@bodyBgColor: #000;
+@headerBgColor: #000;
+@headerLogoText: #fff;
+@fontColor: #fff;
+@linkColor: #fff;
+@visitedLinkColor: #fff;
+@wrap-allBgColor: #000;
+@backgroundBreadcrumb: none;
+@breadcrumbLinkColor: #fff;
+@backgroundByline: none;
+@footerFontColor: #f3f3f3;
+@footerBgColor: #666;
+@footerLinkColor: #f3f3f3;
+@slideNavLinkColor: #fff;
+@slideNavBgColor: #000;
+@navbarItemColor: #fff;
+@navbarItemBgColor: #000;
+@navbarItemHoverColor: #f3f3f3;
+@navbarItemHoverBgColor: #111;
+@maxButtonFontSize: 2em;
+@maxButtonColor: #f3f3f3;
+
+body {
+    background-image: url('../img/background/sunrise-1756274_1920.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #000;
+
+}
+
+/** --------------------------------------------------------------
+ *  Navbar
+ */
+.navbar2 {
+    float: right;
+}
+
+.rm-desktop {
+    font-size: @navbarDesktopFontSize;
+    li {
+        border-right: 1px dotted #fff;
+        float: left;
+    }
+    li:last-child {
+        border: none;
+    }
+}
+
+.rm-desktop li:hover {
+   //box-shadow: 0px 0px 9px #c3c3c3;
+}
+
+/** --------------------------------------------------------------
+ *  Wrapper
+ */
+ .outer-wrap {
+     margin-bottom: @magicNumber;
+ }
+
+ .inner-wrap {
+     border: 2px solid #fff;
+ }
+
+.inner-wrap-main,
+.inner-wrap-breadcrumb,
+.inner-wrap-after-main {
+    background-color: rgba(0,0,0,0.8);
+}
+.inner-wrap-main {
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    .main {
+        padding: @magicNumber;
+        .blog-list-item {
+            border-bottom: 2px solid #fff;
+            margin-bottom: @magicNumber;
+        }
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Sidebar
+ */
+.has-sidebar-right {
+    box-sizing:border-box;
+    border-right: 2px dotted #fff;
+}
+
+.has-sidebar-left {
+    box-sizing:border-box;
+    border-left: 2px dotted #fff;
+}
+
+.fa,
+.rm-max .rm-small .rm-button.rm-clicked {
+    color: #FFF;
+}

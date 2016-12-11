@@ -56,11 +56,6 @@ body {
  */
 .site-header {
     height: auto;
-    .site-logo-text {
-        a {
-            font-weight: normal;
-        }
-    }
 }
 
 @media only screen and (min-width: @maxWidth) {
@@ -69,9 +64,9 @@ body {
         z-index: 1;
         width: 100%;
         box-shadow: 0 2px 3px #333;
-    }
-    .route-theme-selector .outer-wrap-main {
-        margin-top: 52px;
+        .site-header {
+            height: 52px;
+        }
     }
 }
 
@@ -115,7 +110,6 @@ body {
 .outer-wrap-after-main {
     background-color: #c3c3c3;
     background-color: rgba(195,195,195,0.6);
-
 }
 
 .outer-wrap-footer {
@@ -139,6 +133,5 @@ body {
     .figure {
         border: 2px solid #FFF;
         box-shadow: 5px 5px 10px #000;
-
     }
 }

@@ -1,5 +1,5 @@
 /**
-* Anax Flat theme. Dark
+* Anax Flat theme. Contrast
 */
 @import url(base.less);
 @maxWidth: 960px;
@@ -25,15 +25,6 @@
 @maxButtonFontSize: 2em;
 @maxButtonColor: #f3f3f3;
 
-.inner-wrap-main a,
-.inner-wrap-main a:visited {
-    text-decoration: underline;
-}
-
-.wrap-all {
-    border: 2px solid #999;
-}
-
 body code {
     background-color: #666;
 }
@@ -44,6 +35,33 @@ body pre code {
     margin-top: @magicNumber;
     margin-bottom: @magicNumber;
 }
+
+/** --------------------------------------------------------------
+ *  Wrapper
+ */
+.inner-wrap-header {
+    border-bottom: 2px dashed #fff;
+}
+
+.inner-wrap-main a,
+.inner-wrap-main a:visited {
+    text-decoration: underline;
+}
+
+.wrap-all {
+    border: 2px solid #999;
+}
+
+.route-typography .outer-wrap-main {
+    background-image: url("../img/grid/horisontal-grid-22-white.png");
+}
+
+/** --------------------------------------------------------------
+ *  Navigation
+ */
+ .navbar2 {
+     float: right;
+ }
 
 .fa,
 .rm-max .rm-small .rm-button.rm-clicked {

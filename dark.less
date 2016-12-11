@@ -25,15 +25,6 @@
 @maxButtonFontSize: 2em;
 @maxButtonColor: #f3f3f3;
 
-.inner-wrap-main a,
-.inner-wrap-main a:visited {
-    text-decoration: underline;
-}
-
-.wrap-all {
-    border: 2px solid #999;
-}
-
 body code {
     background-color: #666;
 }
@@ -43,6 +34,22 @@ body pre code {
     font-size: 1em;
     margin-top: @magicNumber;
     margin-bottom: @magicNumber;
+}
+
+/** --------------------------------------------------------------
+ *  Wrapper
+ */
+.inner-wrap-main a,
+.inner-wrap-main a:visited {
+    text-decoration: underline;
+}
+
+.wrap-all {
+    border: 2px solid #999;
+}
+
+.route-typography .outer-wrap-main {
+    background-image: url("../img/grid/horisontal-grid-22-white.png");
 }
 
 .fa,
