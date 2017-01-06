@@ -1,6 +1,7 @@
 /**
-* Anax Flat theme.
+* Anax Flat theme.test
 */
+
 @import url(modules.less);
 // Font Awesome
 @import "font-awesome-4.7.0/less/font-awesome.less";
@@ -63,12 +64,26 @@ a:visited {
     color: @visitedLinkColor;
 }
 //Grids for help
-.route-grid .inner-wrap {
-    .showGrid(@maxWidth);
+// .route-grid .inner-wrap {
+//     .showGrid(@maxWidth);
+// }
+
+html.vgrid .inner-wrap {
+    @gridImage: "../img/grid/grid940x12x60x20-nomargin.png";
+    #vgrid .showGrid(960px, @gridImage);
+
+    // &.inner-wrap-header {
+    //     #vgrid .showGrid(100%, @gridImage);
+    // }
+}
+
+html.hgrid .inner-wrap {
+    @gridImage: "../img/grid/horisontal-grid-22.png";
+    #hgrid .showGrid(@gridImage);
 }
 
 .route-typography .outer-wrap-main {
-    .showHorisontalGrid(@maxWidth);
+    // .showHorisontalGrid(@maxWidth);
 }
 
 /** --------------------------------------------------------------
@@ -351,11 +366,11 @@ body pre code {
 /** --------------------------------------------------------------
  *  Footer
  */
-.footer {
+.inner-wrap-footer {
     background-color: @footerBgColor;
     color: @footerFontColor;
     .block {
-        padding: @magicNumber;
+        padding: @magicNumber 0;
     }
     a {
         color: @footerLinkColor;

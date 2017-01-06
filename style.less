@@ -1,5 +1,5 @@
 /**
-* Anax Flat theme. Background Texture
+* Anax Flat theme. Style.less
 */
 @import url(base.less);
 @import url('https://fonts.googleapis.com/css?family=Raleway|Trirong');
@@ -37,8 +37,13 @@
 @maxButtonFontSize: 2em;
 @maxButtonColor: #fff;
 
+html.hgrid .inner-wrap {
+    @gridImage: "../img/grid/horisontal-grid-22-white.png";
+    #hgrid .showGrid(@gridImage);
+}
+
 body {
-    background-image: url('../img/background/ios-linen.png');
+    background-image: url('../img/background/ios-linen.jpg');
     background-attachment: fixed;
     a {
         text-decoration: underline;
